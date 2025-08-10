@@ -1,0 +1,57 @@
+# Arquivos de configuração sensíveis
+.env
+.env.local
+.env.production
+.env.development
+config.properties
+secrets.properties
+
+# Arquivos de credenciais
+credentials/
+secrets/
+*.key
+*.pem
+*.p12
+
+# Arquivos compilados Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Arquivos de build
+target/
+build/
+out/
+bin/
+
+# Arquivos de IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Dependências
+lib/
+node_modules/
+
+# Arquivos de configuração local
+application-local.properties
+application-dev.properties
