@@ -44,15 +44,53 @@ Um sistema profissional de conversão de moedas desenvolvido em Java, com interf
    private static final String API_KEY = "sua_api_key_aqui";
    ```
 
-3. **Compile o projeto:**
-   ```bash
-   javac -cp "lib/*" src/Main.java
-   ```
+3. **Baixe e adicione o Gson (necessário para o IntelliJ e execução local):**
+   - Baixe o JAR do Gson em [Maven Central – Gson](https://search.maven.org/artifact/com.google.code.gson/gson)
+     - Sugestão: versão 2.10.1 ou superior
+   - Crie (se ainda não existir) a pasta `lib/` na raiz do projeto
+   - Mova o arquivo `gson-<versão>.jar` para a pasta `lib/`
 
-4. **Execute o programa:**
-   ```bash
-   java -cp "src:lib/*" Main
-   ```
+   #### Adicionar no IntelliJ IDEA
+   - Abra: File → Project Structure… (`Ctrl+Alt+Shift+S`)
+   - Vá em: Modules → aba Dependencies
+   - Clique no `+` → JARs or directories…
+   - Selecione `lib/gson-<versão>.jar` e confirme (Scope: Compile)
+
+   Opcional (via build tool):
+   - Maven (pom.xml):
+     ```xml
+     <dependency>
+       <groupId>com.google.code.gson</groupId>
+       <artifactId>gson</artifactId>
+       <version>2.10.1</version>
+     </dependency>
+     ```
+   - Gradle (build.gradle):
+     ```groovy
+     dependencies {
+       implementation 'com.google.code.gson:gson:2.10.1'
+     }
+     ```
+
+4. **Compile o projeto:**
+   - Windows (PowerShell/CMD):
+     ```bash
+     javac -cp "lib/*" src/Main.java
+     ```
+   - macOS/Linux:
+     ```bash
+     javac -cp "lib/*" src/Main.java
+     ```
+
+5. **Execute o programa:**
+   - Windows (PowerShell/CMD):
+     ```bash
+     java -cp "src;lib/*" Main
+     ```
+   - macOS/Linux:
+     ```bash
+     java -cp "src:lib/*" Main
+     ```
 
 ### 🔑 Configuração da API Key
 
@@ -125,6 +163,7 @@ O sistema utiliza a **Exchange Rate API** para obter cotações em tempo real:
 conversor-de-moedas/
 ├── src/
 │   └── Main.java          # Classe principal (edite a API key aqui)
+├── lib/                   # Coloque aqui o gson-<versão>.jar
 ├── README.md             # Este arquivo
 └── conversor-moedas-challange.iml  # Configuração do projeto
 ```

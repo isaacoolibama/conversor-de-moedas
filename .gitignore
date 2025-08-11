@@ -49,7 +49,10 @@ logs/
 *.backup
 
 # Dependências
+# Ignora a pasta lib por padrão, mas permite o gson e o .gitkeep
 lib/
+!lib/.gitkeep
+!lib/gson-*.jar
 node_modules/
 
 # Arquivos de configuração local
