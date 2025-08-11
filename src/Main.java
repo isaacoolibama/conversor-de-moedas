@@ -26,7 +26,7 @@ public class Main {
     
     // Substitua pela sua API key da Exchange Rate API
     // Obtenha em: https://exchangerate-api.com/
-    private static final String API_KEY = "eddba02fa627a8fb5dfaddc4";
+    private static final String API_KEY = "sua_api_key_aqui";
     private static final String BASE_URL = "https://v6.exchangerate-api.com/v6/";
     private static final HttpClient httpClient = HttpClient.newHttpClient();
     private static final Gson gson = new Gson();
